@@ -4,7 +4,7 @@
 
 ## HistoLab Pipeline
 
-A comprehensive pipeline for extracting tiles using [HistoLab's](https://github.com/histolab) RandomTiler and GridTiler and then extracting features based on a pre-trained model
+A comprehensive pipeline for extracting tiles using [HistoLab's](https://github.com/histolab/histolab) RandomTiler and GridTiler and then extracting features based on a pre-trained model
 
 ## Overview
 This pipeline automates the process of extracting and analyzing whole slide images (WSIs) for digital pathology. It is designed specifically for hippocampal region analysis, handling multiple annotated regions (CA1, CA2, CA3, Dentate Gyrus, Subiculum) and creating a Non-Hippocampus region by exclusion.
@@ -28,3 +28,4 @@ Annotation Support: Process and utilize QuPath annotations in JSON format
 * Shapely
 * slideio
 * PIL (Pillow)
+
