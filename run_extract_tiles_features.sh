@@ -1,5 +1,5 @@
 #!/bin/bash
-#BSUB -J "grid_tiler"
+#BSUB -J "histolab"
 #BSUB -P acc_tauomics
 #BSUB -q premium
 #BSUB -R rusage[mem=100G]
