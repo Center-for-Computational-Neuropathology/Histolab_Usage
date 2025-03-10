@@ -497,40 +497,76 @@ def inspect_h5_file(h5_file):
                 print(f"  - First few values: []")
             print()
 
+# if __name__ == "__main__":
+#     import time
+    
+#     # Process a single slide
+#     slide_path = "/sc/arion/projects/tauomics/PART_images/Hippocampus_LFB_HE/42054.svs"
+#     json_path = "/sc/arion/projects/tauomics/danielk/qupath_json_data_files/jsondatafiles/42054_1.json"
+#     output_dir = "/sc/arion/projects/tauomics/Shrishtee/HistoLab/GRID_TILER/feature_h5_output"
+    
+#     # Extract patches and features using RandomTiler
+#     print("\n=== PROCESSING WITH RANDOM TILER ===")
+#     random_h5_file = process_and_extract_features(
+#         slide_path=slide_path,
+#         json_path=json_path,
+#         output_dir=output_dir,
+#         tiling_method='random',
+#         n_tiles=100,  # 100 tiles per region
+#         tile_size=(256, 256),
+#         model_name='resnet50'
+#     )
+    
+#     # Inspect the HDF5 file
+#     inspect_h5_file(random_h5_file)
+    
+#     # Extract patches and features using GridTiler
+#     print("\n=== PROCESSING WITH GRID TILER ===")
+#     grid_h5_file = process_and_extract_features(
+#         slide_path=slide_path,
+#         json_path=json_path,
+#         output_dir=output_dir,
+#         tiling_method='grid',
+#         n_tiles=100,  # max tiles to select from grid tiler output
+#         tile_size=(256, 256),
+#         model_name='resnet50'
+#     )
+    
+#     # Inspect the HDF5 file
+#     inspect_h5_file(grid_h5_file)
+
 if __name__ == "__main__":
+    import sys
     import time
     
-    # Process a single slide
-    slide_path = "/sc/arion/projects/tauomics/PART_images/Hippocampus_LFB_HE/42054.svs"
-    json_path = "/sc/arion/projects/tauomics/danielk/qupath_json_data_files/jsondatafiles/42054_1.json"
-    output_dir = "/sc/arion/projects/tauomics/Shrishtee/HistoLab/GRID_TILER/feature_h5_output"
-    
-    # Extract patches and features using RandomTiler
-    print("\n=== PROCESSING WITH RANDOM TILER ===")
-    random_h5_file = process_and_extract_features(
-        slide_path=slide_path,
-        json_path=json_path,
-        output_dir=output_dir,
-        tiling_method='random',
-        n_tiles=100,  # 100 tiles per region
-        tile_size=(256, 256),
-        model_name='resnet50'
-    )
-    
-    # Inspect the HDF5 file
-    inspect_h5_file(random_h5_file)
-    
-    # Extract patches and features using GridTiler
-    print("\n=== PROCESSING WITH GRID TILER ===")
-    grid_h5_file = process_and_extract_features(
-        slide_path=slide_path,
-        json_path=json_path,
-        output_dir=output_dir,
-        tiling_method='grid',
-        n_tiles=100,  # max tiles to select from grid tiler output
-        tile_size=(256, 256),
-        model_name='resnet50'
-    )
-    
-    # Inspect the HDF5 file
-    inspect_h5_file(grid_h5_file)
+    # Check if command-line arguments are provided
+    if len(sys.argv) >= 4:
+        # Read arguments from command line
+        slide_path = sys.argv[1]
+        json_path = sys.argv[2]
+        output_dir = sys.argv[3]
+        tiling_method = sys.argv[4] if len(sys.argv) >= 5 else 'random'
+        
+        print(f"Processing slide: {slide_path}")
+        print(f"Using JSON file: {json_path}")
+        print(f"Output directory: {output_dir}")
+        print(f"Tiling method: {tiling_method}")
+        
+        # Extract patches and features
+        h5_file = process_and_extract_features(
+            slide_path=slide_path,
+            json_path=json_path,
+            output_dir=output_dir,
+            tiling_method=tiling_method,
+            n_tiles=100,  # 100 tiles per region
+            tile_size=(256, 256),
+            model_name='resnet50'
+        )
+        
+        # Inspect the HDF5 file
+        inspect_h5_file(h5_file)
+    else:
+        print("Error: Required arguments not provided.")
+        print("Usage: python extract_features.py <slide_path> <json_path> <output_dir> [tiling_method]")
+        print("Example: python extract_features.py /path/to/slide.svs /path/to/annotations.json /path/to/output random")
+        sys.exit(1)
