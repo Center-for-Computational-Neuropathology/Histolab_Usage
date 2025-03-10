@@ -1,8 +1,7 @@
 [![Compatibility](https://img.shields.io/badge/Compatibility-Linux+%2F+OSX-blue.svg)]()
-[![GitHub Issues](https://img.shields.io/github/issues/your-username/your-repo-name.svg)](https://github.com/your-username/your-repo-name/issues)
 [![GitHub Open](https://img.shields.io/badge/open-1-yellow.svg)]()
 
-## HistoLab Pipeline
+## HistoLab - Pipeline
 
 A comprehensive pipeline for extracting tiles using [HistoLab's](https://github.com/histolab/histolab) RandomTiler and GridTiler and then extracting features based on a pre-trained model
 
