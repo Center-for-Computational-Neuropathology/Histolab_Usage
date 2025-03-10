@@ -7,7 +7,6 @@ A comprehensive pipeline for extracting tiles using [HistoLab's](https://github.
 
 ## Overview
 This pipeline automates the process of extracting and analyzing whole slide images (WSIs) for digital pathology. It is designed specifically for hippocampal region analysis, handling multiple annotated regions (CA1, CA2, CA3, Dentate Gyrus, Subiculum) and creating a Non-Hippocampus region by exclusion.
-Features
 
 1. Tile Extraction: Extract tiles from specific annotated regions using either random or grid-based sampling
 2. Visualization: Generate visual representations of extracted tiles on the original slide
