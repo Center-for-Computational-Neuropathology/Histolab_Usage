@@ -1,5 +1,5 @@
 #!/bin/bash
-#BSUB -J "grid_tiler"
+#BSUB -J "random_tiler"
 #BSUB -P acc_tauomics
 #BSUB -q premium
 #BSUB -R rusage[mem=50G]
@@ -41,10 +41,10 @@ do
          -R "rusage[mem=100G]" \
          -R "span[hosts=1]" \
          -n 1 \
-         -W 10:00 \
+         -W 40:00 \
          -oo "${BASE_OUTPUT_DIR}/logs/tile_${slide_id}_%J.out" \
          -eo "${BASE_OUTPUT_DIR}/logs/tile_${slide_id}_%J.err" \
-         "/hpc/users/kandos01/.conda/envs/graph_env/bin/python /sc/arion/projects/tauomics/Shrishtee/HistoLab/GRID_TILER/scripts/extract_features.py ${slide_path} ${json_path} ${slide_output_dir} random"
+         "/hpc/users/kandos01/.conda/envs/graph_env/bin/python /sc/arion/projects/tauomics/Shrishtee/HistoLab/GRID_TILER/scripts/extract_features_2.py ${slide_path} ${json_path} ${slide_output_dir} random"
 
     echo "Submitted job for ${slide_id} with output to ${slide_output_dir}"
     
