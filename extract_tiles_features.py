@@ -16,7 +16,7 @@ import openslide
 import cv2
 
 # Import your existing histolab implementation
-from histolab_implementation import (process_single_slide, CoordinatesRandomTiler, 
+from histolab_implementation_2 import (process_single_slide, CoordinatesRandomTiler, 
                                     CoordinatesGridTiler, PolygonMask)
 from histolab.slide import Slide
 from histolab.types import CoordinatePair
@@ -195,7 +195,7 @@ def process_and_extract_features(slide_path, json_path, output_dir,
                 annotations = json.load(f)
                 
             # Extract regions using your existing implementation's helper functions
-            from histolab_implementation import getZeroer, coordFixer, getPolygonOfAnnotationLabel
+            from histolab_implementation_2 import getZeroer, coordFixer, getPolygonOfAnnotationLabel, enhanced_tissue_detection, extract_valid_tissue_tiles
             
             regions = {}
             for annotation in annotations:
@@ -233,11 +233,11 @@ def process_and_extract_features(slide_path, json_path, output_dir,
                             except Exception as e:
                                 print(f"Error processing coordinate: {e}")
             
-            # Create GridTiler without n_tiles
+            # Create GridTiler with higher tissue percentage threshold
             grid_tiler = CoordinatesGridTiler(
                 tile_size=tile_size,
                 level=0,
-                tissue_percent=80.0
+                tissue_percent=95.0  # Increased threshold for tissue percentage
             )
             
             # Process each region
@@ -278,7 +278,7 @@ def process_and_extract_features(slide_path, json_path, output_dir,
                     print(f"Extracted {len(tile_coords)} {tiling_method} tile coordinates for {region_name}")
                     
                     # Visualize if needed
-                    from histolab_implementation import visualize_region_with_tiles
+                    from histolab_implementation_2 import visualize_region_with_tiles
                     visualize_region_with_tiles(
                         slide=slide,
                         region_name=region_name,
@@ -291,7 +291,84 @@ def process_and_extract_features(slide_path, json_path, output_dir,
                     print(f"Error processing region {region_name}: {e}")
                     traceback.print_exc()
             
-            # Also create Non-Hippocampus region if possible
+            # Create Non-Hippocampus region if possible
+            try:
+                # Check if we have all necessary regions
+                necessary_regions = {'CA1', 'CA2', 'CA3', 'Subiculum', 'Dentate Gyrus'}
+                present_regions = set(results.keys())
+                
+                if necessary_regions.issubset(present_regions):
+                    print("Creating Non-Hippocampus region")
+                    
+                    # Create combined mask for all hippocampus regions
+                    hc_poly_list = []
+                    
+                    for region_name in necessary_regions:
+                        if region_name in regions:
+                            region_coords_list = regions[region_name]
+                            
+                            for coords in region_coords_list:
+                                polygon = getPolygonOfAnnotationLabel(coords)
+                                hc_poly_list.append(polygon)
+                    
+                    # Create union of all polygons
+                    hc_union = unary_union(hc_poly_list)
+                    hc_exterior = list(hc_union.exterior.coords)
+                    
+                    # Create a tissue mask for the entire slide using improved function
+                    tissue_mask = enhanced_tissue_detection(slide)
+                    
+                    # Resize tissue mask to match slide dimensions for use with histolab
+                    slide_dimensions = slide.dimensions
+                    tissue_mask_resized = np.zeros((slide_dimensions[1], slide_dimensions[0]), dtype=bool)
+                    mask_image = PIL.Image.fromarray(tissue_mask.astype(np.uint8) * 255)
+                    mask_resized = mask_image.resize((slide_dimensions[0], slide_dimensions[1]))
+                    tissue_mask_resized = np.array(mask_resized) > 0
+                    
+                    # Create the hippocampus mask at slide dimensions
+                    hc_mask_slide_dims = np.zeros_like(tissue_mask_resized)
+                    hc_img = PIL.Image.new('L', (slide_dimensions[0], slide_dimensions[1]), 0)
+                    PIL.ImageDraw.Draw(hc_img).polygon(hc_exterior, outline=1, fill=1)
+                    hc_mask_slide_dims = np.array(hc_img).astype(bool)
+                    
+                    # Create the tissue-only, non-hippocampus mask
+                    tissue_not_hc_mask = tissue_mask_resized & ~hc_mask_slide_dims
+                    
+                    # Create a custom mask using this combined boolean mask
+                    from histolab_implementation_2 import CustomBooleanMask
+                    not_hc_tissue_mask = CustomBooleanMask(tissue_not_hc_mask)
+                    
+                    # Use the extract_valid_tissue_tiles function to get exactly n_tiles
+                    tile_coords = extract_valid_tissue_tiles(
+                        slide=slide,
+                        mask=not_hc_tissue_mask,
+                        tiler=grid_tiler,
+                        n_tiles=n_tiles,
+                        tissue_mask=tissue_not_hc_mask
+                    )
+                    
+                    # Store results
+                    results["Not_Hippocampus"] = tile_coords
+                    print(f"Extracted {len(tile_coords)} {tiling_method} tile coordinates for Not_Hippocampus (Tissue Only)")
+                    
+                    # Visualize if needed
+                    from histolab_implementation_2 import visualize_not_hippocampus_improved
+                    visualize_not_hippocampus_improved(
+                        slide=slide,
+                        hc_coords=hc_exterior,
+                        tile_coords=tile_coords,
+                        output_dir=vis_dir,
+                        method=tiling_method,
+                        tissue_mask=tissue_mask_resized  # Pass the tissue mask
+                    )
+                else:
+                    print("Not all necessary regions present, skipping Non-Hippocampus region")
+                    
+            except Exception as e:
+                print(f"Error creating Non-Hippocampus region: {e}")
+                traceback.print_exc()
+                
+            # Set region_coords to the results
             region_coords = results
         else:
             # For random tiler, use the regular process_single_slide
