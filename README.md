@@ -97,6 +97,26 @@ All extracted information is saved to an organized structure:
 2. **Visualizations**:
    - Region overlays showing tile locations
    - Attention maps highlighting salient features
+  
+
+#### CA1
+![image](https://github.com/user-attachments/assets/35105ad0-2a8d-4953-8a24-78095ccb26a6)
+
+#### CA2
+![image](https://github.com/user-attachments/assets/cf3e69d3-96d6-4bd2-8288-96b9b15ed24f)
+
+#### CA3
+![image](https://github.com/user-attachments/assets/44e6d2eb-b371-413a-9c89-12fa1839c466)
+
+#### Dentate Gyrus
+![image](https://github.com/user-attachments/assets/2be451c1-8987-4999-9598-a4ef329b1da5)
+
+#### Subiculum
+![image](https://github.com/user-attachments/assets/d7f7750a-6a34-4e5f-91af-e3a700ab677e)
+
+#### Not Hippocampus
+![image](https://github.com/user-attachments/assets/b22ef0b3-d606-48e5-8e56-aa4bd4cd5e92)
+
 
 ### 6. Batch Processing
 
