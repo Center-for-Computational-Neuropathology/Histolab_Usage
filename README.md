@@ -98,33 +98,23 @@ All extracted information is saved to an organized structure:
    - Region overlays showing tile locations
    - Attention maps highlighting salient features
   
+#### CA1
+<img src="https://github.com/user-attachments/assets/35105ad0-2a8d-4953-8a24-78095ccb26a6" width="400">
 
-<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
-  <div>
-    <h4>CA1</h4>
-    <img src="https://github.com/user-attachments/assets/35105ad0-2a8d-4953-8a24-78095ccb26a6" width="100%">
-  </div>
-  <div>
-    <h4>CA2</h4>
-    <img src="https://github.com/user-attachments/assets/cf3e69d3-96d6-4bd2-8288-96b9b15ed24f" width="100%">
-  </div>
-  <div>
-    <h4>CA3</h4>
-    <img src="https://github.com/user-attachments/assets/44e6d2eb-b371-413a-9c89-12fa1839c466" width="100%">
-  </div>
-  <div>
-    <h4>Dentate Gyrus</h4>
-    <img src="https://github.com/user-attachments/assets/2be451c1-8987-4999-9598-a4ef329b1da5" width="100%">
-  </div>
-  <div>
-    <h4>Subiculum</h4>
-    <img src="https://github.com/user-attachments/assets/d7f7750a-6a34-4e5f-91af-e3a700ab677e" width="100%">
-  </div>
-  <div>
-    <h4>Not Hippocampus</h4>
-    <img src="https://github.com/user-attachments/assets/b22ef0b3-d606-48e5-8e56-aa4bd4cd5e92" width="100%">
-  </div>
-</div>
+#### CA2
+<img src="https://github.com/user-attachments/assets/cf3e69d3-96d6-4bd2-8288-96b9b15ed24f" width="400">
+
+#### CA3
+<img src="https://github.com/user-attachments/assets/44e6d2eb-b371-413a-9c89-12fa1839c466" width="400">
+
+#### Dentate Gyrus
+<img src="https://github.com/user-attachments/assets/2be451c1-8987-4999-9598-a4ef329b1da5" width="400">
+
+#### Subiculum
+<img src="https://github.com/user-attachments/assets/d7f7750a-6a34-4e5f-91af-e3a700ab677e" width="400">
+
+#### Not Hippocampus
+<img src="https://github.com/user-attachments/assets/b22ef0b3-d606-48e5-8e56-aa4bd4cd5e92" width="400">
 
 ### 6. Batch Processing
 
