@@ -100,14 +100,14 @@ All extracted information is saved to an organized structure:
   
 <table>
   <tr>
-    <td align="center"><strong>CA1</strong><br><img src="https://github.com/user-attachments/assets/35105ad0-2a8d-4953-8a24-78095ccb26a6" width="200"></td>
-    <td align="center"><strong>CA2</strong><br><img src="https://github.com/user-attachments/assets/cf3e69d3-96d6-4bd2-8288-96b9b15ed24f" width="200"></td>
-    <td align="center"><strong>CA3</strong><br><img src="https://github.com/user-attachments/assets/44e6d2eb-b371-413a-9c89-12fa1839c466" width="200"></td>
+    <td align="center"><strong>CA1</strong><br><img src="https://github.com/user-attachments/assets/35105ad0-2a8d-4953-8a24-78095ccb26a6" width="275"></td>
+    <td align="center"><strong>CA2</strong><br><img src="https://github.com/user-attachments/assets/cf3e69d3-96d6-4bd2-8288-96b9b15ed24f" width="275"></td>
+    <td align="center"><strong>CA3</strong><br><img src="https://github.com/user-attachments/assets/44e6d2eb-b371-413a-9c89-12fa1839c466" width="275"></td>
   </tr>
   <tr>
-    <td align="center"><strong>Dentate Gyrus</strong><br><img src="https://github.com/user-attachments/assets/2be451c1-8987-4999-9598-a4ef329b1da5" width="200"></td>
-    <td align="center"><strong>Subiculum</strong><br><img src="https://github.com/user-attachments/assets/d7f7750a-6a34-4e5f-91af-e3a700ab677e" width="200"></td>
-    <td align="center"><strong>Not Hippocampus</strong><br><img src="https://github.com/user-attachments/assets/b22ef0b3-d606-48e5-8e56-aa4bd4cd5e92" width="200"></td>
+    <td align="center"><strong>Dentate Gyrus</strong><br><img src="https://github.com/user-attachments/assets/2be451c1-8987-4999-9598-a4ef329b1da5" width="275"></td>
+    <td align="center"><strong>Subiculum</strong><br><img src="https://github.com/user-attachments/assets/d7f7750a-6a34-4e5f-91af-e3a700ab677e" width="275"></td>
+    <td align="center"><strong>Not Hippocampus</strong><br><img src="https://github.com/user-attachments/assets/b22ef0b3-d606-48e5-8e56-aa4bd4cd5e92" width="275"></td>
   </tr>
 </table>
 
