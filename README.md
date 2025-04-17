@@ -101,14 +101,14 @@ All extracted information is saved to an organized structure:
    - Region overlays showing tile locations
    - Attention maps highlighting salient features
   
-<!-- Main title for the attention maps section -->
-<h2 align="center">Images highlighting Hippocampal subregions</h2>
+<!-- Main title -->
 
-<!-- Hippocampus regions table -->
+### Images highlighting Hippocampal subregions
+
 <table border="1" cellpadding="10" cellspacing="0" width="100%">
   <thead>
     <tr>
-      <th colspan="3" align="center"><h3>Hippocampus Regions</h3></th>
+      <th colspan="3" align="center">Hippocampus Regions</th>
     </tr>
   </thead>
   <tbody>
@@ -116,15 +116,15 @@ All extracted information is saved to an organized structure:
     <tr>
       <td align="center" width="33%">
         <h4>CA1</h4>
-        <img src="https://github.com/user-attachments/assets/35105ad0-2a8d-4953-8a24-78095ccb26a6" width="100%" alt="CA1 with random tiling (100 tiles)">
+        <img src="https://github.com/user-attachments/assets/35105ad0-2a8d-4953-8a24-78095ccb26a6" width="100%" alt="CA1 with random tiling">
       </td>
       <td align="center" width="33%">
         <h4>CA2</h4>
-        <img src="https://github.com/user-attachments/assets/cf3e69d3-96d6-4bd2-8288-96b9b15ed24f" width="100%" alt="CA2 with random tiling (100 tiles)">
+        <img src="https://github.com/user-attachments/assets/cf3e69d3-96d6-4bd2-8288-96b9b15ed24f" width="100%" alt="CA2 with random tiling">
       </td>
       <td align="center" width="33%">
         <h4>CA3</h4>
-        <img src="https://github.com/user-attachments/assets/44e6d2eb-b371-413a-9c89-12fa1839c466" width="100%" alt="CA3 with random tiling (100 tiles)">
+        <img src="https://github.com/user-attachments/assets/44e6d2eb-b371-413a-9c89-12fa1839c466" width="100%" alt="CA3 with random tiling">
       </td>
     </tr>
     
@@ -132,22 +132,21 @@ All extracted information is saved to an organized structure:
     <tr>
       <td align="center">
         <h4>Dentate Gyrus</h4>
-        <img src="https://github.com/user-attachments/assets/2be451c1-8987-4999-9598-a4ef329b1da5" width="100%" alt="Dentate Gyrus with random tiling (100 tiles)">
+        <img src="https://github.com/user-attachments/assets/2be451c1-8987-4999-9598-a4ef329b1da5" width="100%" alt="Dentate Gyrus with random tiling">
       </td>
       <td align="center">
         <h4>Subiculum</h4>
-        <img src="https://github.com/user-attachments/assets/d7f7750a-6a34-4e5f-91af-e3a700ab677e" width="100%" alt="Subiculum with random tiling (100 tiles)">
+        <img src="https://github.com/user-attachments/assets/d7f7750a-6a34-4e5f-91af-e3a700ab677e" width="100%" alt="Subiculum with random tiling">
       </td>
-      <td></td> <!-- Empty cell for balance -->
+      <td></td>
     </tr>
   </tbody>
 </table>
 
-<!-- Non-hippocampus regions table -->
 <table border="1" cellpadding="10" cellspacing="0" width="100%" style="margin-top: 20px;">
   <thead>
     <tr>
-      <th colspan="2" align="center"><h3>Non-Hippocampus Regions</h3></th>
+      <th colspan="2" align="center">Non-Hippocampus Regions</th>
     </tr>
   </thead>
   <tbody>
