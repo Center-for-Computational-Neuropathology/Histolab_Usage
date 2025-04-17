@@ -140,11 +140,11 @@ All extracted information is saved to an organized structure:
   </tr>
   <tr>
     <td align="center" width="50%">
-      <strong>Random Tiling</strong><br>
+      <strong>White background</strong><br>
       <img src="https://github.com/user-attachments/assets/b22ef0b3-d606-48e5-8e56-aa4bd4cd5e92" width="100%">
     </td>
     <td align="center" width="50%">
-      <strong>Grid Tiling</strong><br>
+      <strong>Black background</strong><br>
       <img src="https://github.com/user-attachments/assets/0f4f1500-9c4b-4d58-b8a8-00d997d03a05" width="100%">
     </td>
   </tr>
