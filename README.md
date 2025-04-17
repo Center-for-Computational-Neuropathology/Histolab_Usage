@@ -91,7 +91,7 @@ Once tiles are generated, deep learning features are extracted using a pre-train
 
 All extracted information is saved to an organized structure:
 
-1. **HDF5 file**: Contains:
+1. **HDF5 file** Contains:
    - Patch coordinates (x, y positions)
    - Raw image patches
    - Feature vectors (2048 values per patch)
@@ -100,67 +100,54 @@ All extracted information is saved to an organized structure:
 2. **Visualizations**:
    - Region overlays showing tile locations
    - Attention maps highlighting salient features
-  
-<!-- Main title -->
 
 ### Images highlighting Hippocampal subregions
 
 <table border="1" cellpadding="10" cellspacing="0" width="100%">
-  <thead>
-    <tr>
-      <th colspan="3" align="center">Hippocampus Regions</th>
-    </tr>
-  </thead>
-  <tbody>
-    <!-- First row: CA1, CA2, CA3 -->
-    <tr>
-      <td align="center" width="33%">
-        <h4>CA1</h4>
-        <img src="https://github.com/user-attachments/assets/35105ad0-2a8d-4953-8a24-78095ccb26a6" width="100%" alt="CA1 with random tiling">
-      </td>
-      <td align="center" width="33%">
-        <h4>CA2</h4>
-        <img src="https://github.com/user-attachments/assets/cf3e69d3-96d6-4bd2-8288-96b9b15ed24f" width="100%" alt="CA2 with random tiling">
-      </td>
-      <td align="center" width="33%">
-        <h4>CA3</h4>
-        <img src="https://github.com/user-attachments/assets/44e6d2eb-b371-413a-9c89-12fa1839c466" width="100%" alt="CA3 with random tiling">
-      </td>
-    </tr>
-    
-    <!-- Second row: Dentate Gyrus, Subiculum, empty cell -->
-    <tr>
-      <td align="center">
-        <h4>Dentate Gyrus</h4>
-        <img src="https://github.com/user-attachments/assets/2be451c1-8987-4999-9598-a4ef329b1da5" width="100%" alt="Dentate Gyrus with random tiling">
-      </td>
-      <td align="center">
-        <h4>Subiculum</h4>
-        <img src="https://github.com/user-attachments/assets/d7f7750a-6a34-4e5f-91af-e3a700ab677e" width="100%" alt="Subiculum with random tiling">
-      </td>
-      <td></td>
-    </tr>
-  </tbody>
+  <tr>
+    <th colspan="3" align="center">Hippocampus Regions</th>
+  </tr>
+  <tr>
+    <td align="center" width="33%">
+      <strong>CA1</strong><br>
+      <img src="https://github.com/user-attachments/assets/35105ad0-2a8d-4953-8a24-78095ccb26a6" width="100%">
+    </td>
+    <td align="center" width="33%">
+      <strong>CA2</strong><br>
+      <img src="https://github.com/user-attachments/assets/cf3e69d3-96d6-4bd2-8288-96b9b15ed24f" width="100%">
+    </td>
+    <td align="center" width="33%">
+      <strong>CA3</strong><br>
+      <img src="https://github.com/user-attachments/assets/44e6d2eb-b371-413a-9c89-12fa1839c466" width="100%">
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <strong>Dentate Gyrus</strong><br>
+      <img src="https://github.com/user-attachments/assets/2be451c1-8987-4999-9598-a4ef329b1da5" width="100%">
+    </td>
+    <td align="center">
+      <strong>Subiculum</strong><br>
+      <img src="https://github.com/user-attachments/assets/d7f7750a-6a34-4e5f-91af-e3a700ab677e" width="100%">
+    </td>
+    <td></td>
+  </tr>
 </table>
 
 <table border="1" cellpadding="10" cellspacing="0" width="100%" style="margin-top: 20px;">
-  <thead>
-    <tr>
-      <th colspan="2" align="center">Non-Hippocampus Regions</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td align="center" width="50%">
-        <h4>Random Tiling</h4>
-        <img src="https://github.com/user-attachments/assets/b22ef0b3-d606-48e5-8e56-aa4bd4cd5e92" width="100%" alt="Not Hippocampus with random tiling">
-      </td>
-      <td align="center" width="50%">
-        <h4>Grid Tiling</h4>
-        <img src="https://github.com/user-attachments/assets/0f4f1500-9c4b-4d58-b8a8-00d997d03a05" width="100%" alt="Not Hippocampus with grid tiling">
-      </td>
-    </tr>
-  </tbody>
+  <tr>
+    <th colspan="2" align="center">Non-Hippocampus Regions</th>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <strong>Random Tiling</strong><br>
+      <img src="https://github.com/user-attachments/assets/b22ef0b3-d606-48e5-8e56-aa4bd4cd5e92" width="100%">
+    </td>
+    <td align="center" width="50%">
+      <strong>Grid Tiling</strong><br>
+      <img src="https://github.com/user-attachments/assets/0f4f1500-9c4b-4d58-b8a8-00d997d03a05" width="100%">
+    </td>
+  </tr>
 </table>
 
 ### 6. Batch Processing
