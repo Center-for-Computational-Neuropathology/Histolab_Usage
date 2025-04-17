@@ -14,6 +14,9 @@ This pipeline automates the process of extracting and analyzing whole slide imag
 4. Data Management: Store extracted tiles, coordinates, and features in HDF5 files for efficient access
 5. Annotation Support: Process and utilize QuPath annotations in JSON format
 
+## Google slides
+https://docs.google.com/presentation/d/1wqhuwQKO9lDNQlWWmiAXZmJg7B79TqFgUOqzmDi6Jvo/edit?slide=id.g3441877eb01_0_0#slide=id.g3441877eb01_0_0
+
 ## Requirements
 
 * Python 3.8+
@@ -109,8 +112,11 @@ All extracted information is saved to an organized structure:
     <td align="center"><strong>Subiculum</strong><br><img src="https://github.com/user-attachments/assets/d7f7750a-6a34-4e5f-91af-e3a700ab677e" width="300"></td>
   </tr>
   <tr>
-    <td align="center"><strong>Not Hippocampus</strong><br><img src="https://github.com/user-attachments/assets/b22ef0b3-d606-48e5-8e56-aa4bd4cd5e92" width="300"></td>
-    <td align="center"><strong>Not Hippocampus</strong><br><img src="https://github.com/user-attachments/assets/0f4f1500-9c4b-4d58-b8a8-00d997d03a05" width="300"></td>
+    <td colspan="3" align="center"><h3>Not Hippocampus Images</h3></td>
+  </tr>
+  <tr>
+    <td align="center"><strong>Not Hippocampus</strong><br><img src="https://github.com/user-attachments/assets/b22ef0b3-d606-48e5-8e56-aa4bd4cd5e92" width="400"></td>
+    <td align="center"><strong>Not Hippocampus</strong><br><img src="https://github.com/user-attachments/assets/0f4f1500-9c4b-4d58-b8a8-00d997d03a05" width="400"></td>
   </tr>
 </table>
 
