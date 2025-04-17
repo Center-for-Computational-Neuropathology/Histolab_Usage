@@ -101,23 +101,67 @@ All extracted information is saved to an organized structure:
    - Region overlays showing tile locations
    - Attention maps highlighting salient features
   
-<table>
-  <tr>
-    <td align="center"><strong>CA1</strong><br><img src="https://github.com/user-attachments/assets/35105ad0-2a8d-4953-8a24-78095ccb26a6" width="300"></td>
-    <td align="center"><strong>CA2</strong><br><img src="https://github.com/user-attachments/assets/cf3e69d3-96d6-4bd2-8288-96b9b15ed24f" width="300"></td>
-    <td align="center"><strong>CA3</strong><br><img src="https://github.com/user-attachments/assets/44e6d2eb-b371-413a-9c89-12fa1839c466" width="300"></td>
-  </tr>
-  <tr>
-    <td align="center"><strong>Dentate Gyrus</strong><br><img src="https://github.com/user-attachments/assets/2be451c1-8987-4999-9598-a4ef329b1da5" width="300"></td>
-    <td align="center"><strong>Subiculum</strong><br><img src="https://github.com/user-attachments/assets/d7f7750a-6a34-4e5f-91af-e3a700ab677e" width="300"></td>
-  </tr>
-  <tr>
-    <td colspan="3" align="center"><h3>Not Hippocampus Images</h3></td>
-  </tr>
-  <tr>
-    <td align="center"><strong>Not Hippocampus</strong><br><img src="https://github.com/user-attachments/assets/b22ef0b3-d606-48e5-8e56-aa4bd4cd5e92" width="400"></td>
-    <td align="center"><strong>Not Hippocampus</strong><br><img src="https://github.com/user-attachments/assets/0f4f1500-9c4b-4d58-b8a8-00d997d03a05" width="400"></td>
-  </tr>
+<!-- Main title for the attention maps section -->
+<h2 align="center">Attention Maps Highlighting Salient Features</h2>
+
+<!-- Hippocampus regions table with consistent styling -->
+<table border="1" cellpadding="10" cellspacing="0" width="100%">
+  <thead>
+    <tr bgcolor="#f0f0f0">
+      <th colspan="3" align="center"><h3>Hippocampus Regions</h3></th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- First row: CA1, CA2, CA3 -->
+    <tr>
+      <td align="center" width="33%">
+        <h4>CA1</h4>
+        <img src="path/to/CA1_image.png" width="100%" alt="CA1 with random tiling (100 tiles)">
+      </td>
+      <td align="center" width="33%">
+        <h4>CA2</h4>
+        <img src="path/to/CA2_image.png" width="100%" alt="CA2 with random tiling (100 tiles)">
+      </td>
+      <td align="center" width="33%">
+        <h4>CA3</h4>
+        <img src="path/to/CA3_image.png" width="100%" alt="CA3 with random tiling (100 tiles)">
+      </td>
+    </tr>
+    
+    <!-- Second row: Dentate Gyrus, Subiculum, placeholder (or empty) -->
+    <tr>
+      <td align="center">
+        <h4>Dentate Gyrus</h4>
+        <img src="path/to/Dentate_Gyrus_image.png" width="100%" alt="Dentate Gyrus with random tiling (100 tiles)">
+      </td>
+      <td align="center">
+        <h4>Subiculum</h4>
+        <img src="path/to/Subiculum_image.png" width="100%" alt="Subiculum with random tiling (100 tiles)">
+      </td>
+      <td></td> <!-- Empty cell for balance -->
+    </tr>
+  </tbody>
+</table>
+
+<!-- Non-hippocampus regions table -->
+<table border="1" cellpadding="10" cellspacing="0" width="100%" style="margin-top: 20px;">
+  <thead>
+    <tr bgcolor="#f0f0f0">
+      <th colspan="2" align="center"><h3>Non-Hippocampus Regions</h3></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center" width="50%">
+        <h4>Random Tiling</h4>
+        <img src="path/to/Not_Hippocampus_random.png" width="100%" alt="Not Hippocampus with random tiling">
+      </td>
+      <td align="center" width="50%">
+        <h4>Grid Tiling</h4>
+        <img src="path/to/Not_Hippocampus_grid.png" width="100%" alt="Not Hippocampus with grid tiling">
+      </td>
+    </tr>
+  </tbody>
 </table>
 
 ### 6. Batch Processing
