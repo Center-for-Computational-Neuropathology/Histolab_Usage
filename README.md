@@ -101,8 +101,6 @@ All extracted information is saved to an organized structure:
    - Region overlays showing tile locations
    - Attention maps highlighting salient features
 
-### Images highlighting Hippocampal subregions
-
 <table border="1" cellpadding="10" cellspacing="0" width="100%">
   <tr>
     <th colspan="3" align="center">Hippocampus Regions</th>
