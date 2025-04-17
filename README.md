@@ -107,8 +107,10 @@ All extracted information is saved to an organized structure:
   <tr>
     <td align="center"><strong>Dentate Gyrus</strong><br><img src="https://github.com/user-attachments/assets/2be451c1-8987-4999-9598-a4ef329b1da5" width="300"></td>
     <td align="center"><strong>Subiculum</strong><br><img src="https://github.com/user-attachments/assets/d7f7750a-6a34-4e5f-91af-e3a700ab677e" width="300"></td>
+  </tr>
+  <tr>
     <td align="center"><strong>Not Hippocampus</strong><br><img src="https://github.com/user-attachments/assets/b22ef0b3-d606-48e5-8e56-aa4bd4cd5e92" width="300"></td>
-     <td align="center"><strong>Not Hippocampus</strong><br><img src="https://github.com/user-attachments/assets/0f4f1500-9c4b-4d58-b8a8-00d997d03a05" width="300"></td>
+    <td align="center"><strong>Not Hippocampus</strong><br><img src="https://github.com/user-attachments/assets/0f4f1500-9c4b-4d58-b8a8-00d997d03a05" width="300"></td>
   </tr>
 </table>
 
